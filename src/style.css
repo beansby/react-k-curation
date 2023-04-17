@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syncopate:wght@400;700&display=swap');
+
+
+.btn-category {
+    @apply block h-[72px] w-[34%]
+    text-xl font-semibold
+    hover:bg-white hover:text-darknavy
+}
+
+/* main parallax */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.seoul-bg {
+    /* sky */
+    @apply absolute object-cover h-screen bottom-0 right-0 top-0
+    
+}
+
+.seoul-left {
+    /* mountain2 */
+    @apply absolute bottom-[-100px] w-[1100px] 
+    left-0 z-[18]
+}
+
+.seoul-right {  
+    /* mountain1 */
+    @apply absolute bottom-[-100px] w-[1500px]
+    right-0 z-[19]
+}
+
+.main-title {
+    @apply absolute z-[19] leading-[4rem]
+    text-center w-full text-[10rem] text-offwhite font-eng-nav font-extrabold
+    top-[calc(50%-2rem)]
+}
+
+
+
+/* main header */
+header {
+    @apply 
+    w-full h-screen relative overflow-hidden
+    /* content:''; */
+    after:content-[''] after:absolute after:w-full after:h-full
+    after:left-0 after:top-0 after:bg-[rgba(0,0,0,0.05)] after:z-[25]
+}
+
+/* navigation */
+nav {
+    @apply absolute top-0 left-0 w-full px-0 py-4
+    z-30
+    bg-gradient-to-b from-[rgba(0,0,0,0.05)]
+}
+
+.container-nav {
+    @apply max-w-[74rem] py-2 px-8
+    my-4 mx-auto
+    flex justify-between items-center
+
+}
+
+.logo {
+    @apply
+    text-white 
+}
+
+.side-menu {
+    @apply w-6 h-6 
+    flex items-center justify-end
+    cursor-pointer
+}
+
+.bar {
+    @apply w-5 h-[2px] bg-white
+    rounded-[2px] relative
+
+    before:content-[''] after:content-['']
+    before:absolute after:absolute
+    before:w-6 after:w-6 before:h-[2px] after:h-[2px]
+    before:right-0 after:right-0
+    before:bg-white after:bg-white
+    before:rounded-[2px] after:rounded-[2px]
+
+    before:translate-y-[-8px]
+    after:translate-y-[8px]
+}
+
+/* body */
+section {
+    @apply w-full bg-darknavy
+    relative
+}
+
+.shadow {
+    @apply absolute bottom-full
+    h-[300px] w-full left-0 z-20
+    bg-gradient-to-t from-darknavy
+}
