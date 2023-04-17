@@ -22,7 +22,7 @@
 
 .seoul-bg {
     /* sky */
-    @apply absolute object-cover h-screen bottom-0 right-0 top-0
+    @apply absolute w-[2100px] h-screen bottom-0 right-0 top-0
     
 }
 
@@ -105,4 +105,40 @@ section {
     @apply absolute bottom-full
     h-[300px] w-full left-0 z-20
     bg-gradient-to-t from-darknavy
+}
+
+.contents-category {
+    @apply bg-white text-darknavy
+    px-20 py-10
+}
+
+
+/* footer */
+footer {
+    @apply px-20 py-8
+    /* bg-gradient-to-t from-darknavy/50 */
+}
+
+.container-footer {
+    @apply my-5
+}
+
+.button-sitemap {
+    @apply text-[12px] font-kor font-light
+    bg-darkgrey text-white
+    inline-block h-[24px] leading-[24px] mr-3 px-2
+}
+
+.footer-title {
+    @apply text-[13px] font-bold font-kor
+    text-darkgrey h-[36px]
+}
+
+.footer-link {
+    @apply text-[11px] font-kor font-normal
+    text-darkgrey block h-[24px]
+}
+
+.policy-link {
+    @apply text-[11px] font-kor2 px-4
 }
