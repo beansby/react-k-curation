@@ -13,6 +13,7 @@ module.exports = {
       'darkgrey' : '#37363A',
       'grey' : '#878787',
       'lightgrey':'#C7C7C7',
+      'cpurple':'#5B4B89',
 
     },
     fontFamily: {
@@ -24,6 +25,7 @@ module.exports = {
   },
   plugins: [
     // require('@tailwindcss/custom-forms'),
+    require("tailwindcss-animation-delay"),
   ],
   mode: "jit",
 }

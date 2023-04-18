@@ -6,7 +6,7 @@ function Korea() {
   const movement = document.querySelectorAll('.movement'); 
   window.addEventListener('scroll', ()=>{
     let scroll = window.pageYOffset;
-    // console.log(scroll);
+    console.log(scroll);
 
     movement.forEach(element => {
       let speed = element.dataset.speed;
@@ -18,7 +18,6 @@ function Korea() {
   return (
     <header className="">
       
-      <Navigation/>
 
       <h1 className="main-title movement" data-speed="0.1"> KOREA </h1>
       <img src="/img-right.png" alt="" className="seoul-right movement" data-speed="-0.10"/>
