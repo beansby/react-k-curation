@@ -59,7 +59,7 @@ header {
 /* 토글 메뉴버튼 */
 .side-menu-button {
     @apply fixed z-50
-    top-0 left-0 grid place-items-center
+    top-0 right-0 grid place-items-center
     w-[88px] h-[88px] 
     bg-[url('/public/menu.png')]
     bg-no-repeat bg-center
@@ -72,23 +72,28 @@ body.open .side-menu-button {
 /* 사이드메뉴 배경 */
 .side-background {
     @apply fixed z-[48]
-    top-[44px] left-[44px]
+    top-[44px] 
+    /* left-[44px] */
+    right-[44px]
     aspect-square 
-    translate-x-[-50%] translate-y-[-50%]
     h-[88px] bg-darknavy
     rounded-[50%] 
     opacity-0 
-    transition duration-[0.6s]
+    transition duration-[0.5s]
+    translate-x-[50%] translate-y-[-50%]
+    scale-0
 }
 
 body.open .side-background {
     @apply h-[450vh] opacity-90 
+    -scale-150 duration-[0.6s]
 }
 
 /* 사이드 메뉴 */
 .side-menu {
     @apply fixed z-[49]
-    top-0 left-0 flex items-center
+    top-0 right-0 flex items-center justify-end text-right
+    p-20
     h-full w-full transition duration-[0.05s]
     invisible
 }
@@ -107,7 +112,7 @@ body .side-menu nav > a:hover {
 
 .side-menu nav {
     @apply flex flex-col
-    justify-center items-start pl-[100px]
+    justify-center items-end pl-[100px]
 }
 
 /* 메뉴 나오는 효과 */
@@ -122,10 +127,10 @@ body .side-menu nav > a:hover {
 /* 메뉴 화살표 */
 .side-menu a::after {
     @apply content-[''] absolute
-    top-1/2 right-[-26px] translate-y-[-50%]
+    top-1/2 left-[-26px] translate-y-[-50%]
     w-[10px] h-[10px]
     border-t-[3px] border-r-[3px]
-    opacity-0 rotate-45 transition duration-[0.3s]
+    opacity-0 -rotate-[135deg] transition duration-[0.3s]
 }
 .side-menu a:hover::after {
     @apply opacity-100

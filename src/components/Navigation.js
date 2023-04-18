@@ -12,9 +12,9 @@ export default function Navigation(){
 
             <div className="side-menu">
                 <nav> 
-                    <a href="" className="animation-delay-[0.2s]"> About </a>
-                    <a href="" className="animation-delay-[0.2s]"> K-Tour </a>
-                    <a href="" className="animation-delay-[0.2s]"> Seoul Subway Map  </a>
+                    <a href="http://localhost:3000/about" className="animation-delay-[0.2s]"> About </a>
+                    <a href="http://localhost:3000/" className="animation-delay-[0.2s]"> K-Tour </a>
+                    <a href="http://localhost:3000/subwaytour" className="animation-delay-[0.2s]"> Seoul Subway Map  </a>
                 </nav>
             </div>
         </>
