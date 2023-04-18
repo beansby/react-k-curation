@@ -5,6 +5,23 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syncopate:wght@400;700&display=swap');
 
+@media (max-width:390px){
+    header { min-width: 390px;}
+    .category { min-width: 390px;}
+    header > .main-title { 
+        @apply text-[60px]
+    }
+}
+
+@media (max-width:768px) {
+    .mini-header {
+        min-width: 768px;
+    }
+}
+
+@media (min-width:974px) {
+    .mini-header>.seoul-right { max-width: 1000px;}
+}
 
 .btn-category {
     @apply block h-[72px] w-[34%]
@@ -12,17 +29,18 @@
     hover:bg-white hover:text-darknavy
 }
 
-/* main parallax */
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+
+
+/* header parallax */
 .seoul-bg {
     /* sky */
-    @apply absolute w-[2100px] h-screen bottom-0 right-0 top-0
+    @apply absolute w-[2100px] h-[101vh] bottom-0 right-0 top-0
     
 }
 
@@ -46,14 +64,23 @@
 
 
 
-/* main header */
+/* header */
 header {
     @apply 
-    w-full h-screen relative overflow-hidden
+    w-full h-screen relative 
+    overflow-hidden
     /* content:''; */
     after:content-[''] after:absolute after:w-full after:h-full
     after:left-0 after:top-0 after:bg-[rgba(0,0,0,0.05)] after:z-[25]
 }
+
+.mini-header {
+    @apply w-full h-[250px] relative overflow-hidden
+    after:content-[''] after:absolute after:w-full after:h-[250px]
+    after:left-0 after:top-0 after:z-[25]
+}
+
+
 
 /* navigation */
 /* 토글 메뉴버튼 */
@@ -63,6 +90,7 @@ header {
     w-[88px] h-[88px] 
     bg-[url('/public/menu.png')]
     bg-no-repeat bg-center
+    bg-menu
 }
 
 body.open .side-menu-button {
@@ -161,6 +189,7 @@ section {
     relative
 }
 
+/* body - main*/
 .shadow {
     @apply absolute bottom-full
     h-[300px] w-full left-0 z-20
@@ -170,6 +199,14 @@ section {
 .contents-category {
     @apply bg-white text-darknavy
     px-20 py-10
+}
+
+
+/* body - info */
+.info {
+    @apply text-darknavy bg-white/90 rounded-3xl
+    px-20 py-10 h-[50rem]
+    w-[80%] mx-auto 
 }
 
 

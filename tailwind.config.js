@@ -5,6 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      'menu' : '35px',
+    },
     colors:{
       'darknavy': '#0b0537',
       // "#020C35", 
