@@ -7,7 +7,6 @@ export default function MainPage(){
         <>
             <Korea/>
             <main>
-
                 <Theme/>
             </main>
         </>
